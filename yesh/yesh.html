@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voltx - Electronics Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f3f6;
+        }
+        /* Header */
+        .header {
+            background: linear-gradient(180deg, #99e9ff, #ffffff);
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .search-bar {
+            display: flex;
+            background: white;
+            padding: 8px;
+            border-radius: 20px;
+            width: 80%;
+            align-items: center;
+        }
+        .search-bar input {
+            border: none;
+            outline: none;
+            width: 100%;
+            padding: 5px;
+            font-size: 16px;
+        }
+        /* Categories */
+        .categories {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            background: white;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        .category {
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .category img {
+            width: 40px;
+            height: 40px;
+        }
+        /* Banner Carousel */
+        .carousel {
+            background-color: black;
+            width:100 %;
+            overflow: hidden;
+            position: relative;
+        }
+        .carousel img{
+            padding-left: 10vh;
+        }
+        /* Product Grid */
+        .container {
+            padding: 15px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+        .product-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+        .product-card img {
+            width: 80px;
+            height: 80px;
+        }
+        .product-card h4 {
+            font-size: 14px;
+            margin: 8px 0;
+        }
+        .product-card p {
+            color: #388e3c;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        /* Bottom Navigation */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            border-top: 1px solid #ddd;
+        }
+        .bottom-nav div {
+            text-align: center;
+            font-size: 12px;
+            cursor: pointer;
+        }
+        .bottom-nav img {
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+    <script>
+        function openExternal(url) {
+            window.open(url, "_blank", "noopener,noreferrer");
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <div class="search-bar">
+            <input type="text" placeholder="Search for products...">
+        </div>
+    </div>
+
+    <!-- Categories -->
+    <div class="categories">
+        <div class="category" onclick="openExternal('https://www.gsmarena.com/')">
+            <img src="https://cdn-icons-png.flaticon.com/512/3771/3771518.png">
+            <p>Mobiles</p>
+        </div>
+        <div class="category" onclick="openExternal('https://www.gsmarena.com/laptop-finder.php')">
+            <img src="https://cdn-icons-png.flaticon.com/512/1042/1042201.png">
+            <p>Laptops</p>
+        </div>
+        <div class="category" onclick="openExternal('https://www.rtings.com/tv')">
+            <img src="https://cdn-icons-png.flaticon.com/512/3312/3312788.png">
+            <p>Televisions</p>
+        </div>
+    </div>
+
+    <!-- Carousel Banner -->
+    <div class="carousel">
+        <img src="yesh4.jpeg" alt="Offer Banner">
+    </div>
+
+    <!-- Product Listings -->
+    <div class="container">
+        <h2>Top Picks for You</h2>
+        <div class="product-grid">
+            <div class="product-card" onclick="openExternal('https://www.gsmarena.com/')">
+                <img src="https://cdn-icons-png.flaticon.com/512/3771/3771518.png">
+                <h4>Smartphone</h4>
+                <p>Latest Models Available</p>
+            </div>
+            <div class="product-card" onclick="openExternal('https://www.gsmarena.com/laptop-finder.php')">
+                <img src="https://cdn-icons-png.flaticon.com/512/1042/1042201.png">
+                <h4>Gaming Laptop</h4>
+                <p>Top Brands & Deals</p>
+            </div>
+            <div class="product-card" onclick="openExternal('https://www.rtings.com/tv/reviews/best')">
+                <img src="https://cdn-icons-png.flaticon.com/512/3312/3312788.png">
+                <h4>4K Smart TV</h4>
+                <p>Best Rated TVs</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+        <div>
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png">
+            <p>Home</p>
+        </div>
+        <div>
+            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png">
+            <p>You</p>
+        </div>
+        <div>
+            <img src="https://cdn-icons-png.flaticon.com/512/34/34627.png">
+            <p>Cart</p>
+        </div>
+        <div>
+            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png">
+            <p>Menu</p>
+        </div>
+    </div>
+
+</body>
+</html>
